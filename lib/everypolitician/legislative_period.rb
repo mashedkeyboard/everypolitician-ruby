@@ -32,7 +32,7 @@ module Everypolitician
     end
 
     def csv
-      CSV.parse(open(csv_url).read, headers: true, header_converters: :symbol, converters: nil)
+      CSV.parse(URI.open(csv_url, &:read), headers: true, header_converters: :symbol, converters: nil)
     end
 
     def [](key)

@@ -40,7 +40,7 @@ module Everypolitician
     end
 
     def popolo
-      @popolo ||= Everypolitician::Popolo.parse(open(popolo_url).read)
+      @popolo ||= Everypolitician::Popolo.parse(URI.open(popolo_url, &:read))
     end
 
     def legislative_periods

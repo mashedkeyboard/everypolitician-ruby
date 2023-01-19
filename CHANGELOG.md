@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.21.0] - 2023-01-19
+
+### Changed
+- Made compatible with Ruby 3.0 by switching to URI.open.
+
 ## [0.20.0] - 2016-10-28
 
 ### Added

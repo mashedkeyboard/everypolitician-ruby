@@ -20,7 +20,7 @@ module Everypolitician
 
     def countries
       @countries ||= begin
-        JSON.parse(open(index_url).read, symbolize_names: true).map do |c|
+        JSON.parse(URI.open(index_url, &:read), symbolize_names: true).map do |c|
           Country.new(c)
         end
       end
